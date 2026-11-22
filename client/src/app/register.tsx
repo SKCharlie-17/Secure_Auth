@@ -28,7 +28,7 @@ export default function Register() {
   const [loading, setLoading] = useState(false);
 
   const handleRegister = async () => {
-    if (!fullName.trim() || !username.trim() || !email.trim()) {
+    if (!fullName.trim() || !username.trim() || !email.trim() || !password) {
       Alert.alert('Error', 'Please fill in all required fields.');
       return;
     }
@@ -127,7 +127,7 @@ export default function Register() {
           autoCapitalize="none"
         />
 
-        <Text style={styles.label}>Password (Optional)</Text>
+        <Text style={styles.label}>Password *</Text>
         <TextInput
           style={styles.input}
           placeholder="Create a password"
@@ -178,10 +178,6 @@ export default function Register() {
           <Text style={styles.backText}>
             Back to Home
           </Text>
-        </Pressable>
-
-        <Pressable onPress={() => router.back()}>
-          <Text style={styles.backText}>Back</Text>
         </Pressable>
 
       </ScrollView>

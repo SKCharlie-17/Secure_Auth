@@ -134,6 +134,14 @@ export default function CredentialScreen() {
         </Text>
       </Pressable>
 
+      <Pressable style={styles.faceButton}
+        onPress={() => router.replace('/')}
+      >
+        <Text style={styles.buttonText}>
+          Back to Home
+        </Text>
+      </Pressable>
+
     </ScrollView>
   );
 }

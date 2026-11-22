@@ -52,7 +52,7 @@ export default function SecureAuth() {
         </Pressable>
 
         <Pressable
-          style={styles.button}//check here done copilot
+          style={styles.button}
           onPress={() => router.push('/scan' as never)}>
           <Text style={styles.buttonText}>
             Scan QR Code
