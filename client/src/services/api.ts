@@ -1,5 +1,5 @@
 import { File } from 'expo-file-system';
-const BASE_URL = 'http://192.168.1.5:5000';
+const BASE_URL = 'http://ipv4address:5000';
 
 // USER REGISTRATION
 export async function registerUser(userData: {
