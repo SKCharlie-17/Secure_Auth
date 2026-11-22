@@ -98,6 +98,6 @@ Future improvements may include additional security hardening, improved biometri
 
 ## 👨‍💻 Author
 
-**Suryansh Kashav**
+**Charlie**
 
 Developed as a project exploring Python backend development, computer vision, and multi-layer authentication systems.
