@@ -1,5 +1,5 @@
 import { File } from 'expo-file-system';
-const BASE_URL = 'http://192.168.1.5:5000';
+const BASE_URL = 'http://192.168.1.11:5000';
 
 // USER REGISTRATION
 export async function registerUser(userData: {
@@ -127,30 +127,30 @@ export async function authenticateFace(
 }
 
 export async function authenticatePasswordFallback(
-    userId: string,
-    password: string
+  userId: string,
+  password: string
 ) {
-    const response = await fetch(
-        `${BASE_URL}/api/auth/password-fallback`,
-        {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                userId,
-                password,
-            }),
-        }
-    );
-
-    const result = await response.json();
-
-    if (!response.ok) {
-        throw new Error(
-            result.error || result.message || 'Password verification failed'
-        );
+  const response = await fetch(
+    `${BASE_URL}/api/auth/password-fallback`,
+    {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        userId,
+        password,
+      }),
     }
+  );
 
-    return result;
+  const result = await response.json();
+
+  if (!response.ok) {
+    throw new Error(
+      result.error || result.message || 'Password verification failed'
+    );
+  }
+
+  return result;
 }
